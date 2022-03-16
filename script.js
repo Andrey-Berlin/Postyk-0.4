@@ -74,13 +74,13 @@ section.innerHTML = `
 <br>
 <label for="">
 
-3. Поменять размер текста, движением ползунка от -> 18px -> 100px:
+3. Поменять размер текста, движением ползунка от -> 18px -> 48px:
 
 <label>
 <br>
 <hr>
 <br>
-<input type="range" min="18" name="a" max="100" value="18" step="10" id="font size" >
+<input type="range" min="18" name="a" max="48" value="18" step="2" id="font size" >
 <!--output name="x" for="a b"></output-->
 <br>
 <hr>
@@ -166,9 +166,9 @@ input {
 
 #text{
 
-    text-align: center;
+    text-align: left;
     font-size: 20px;
-    padding:10px 0px 0px 0px;
+    padding:10px 0px 0px 10px;
 
 
 }
@@ -177,7 +177,8 @@ input {
 
 h1, p, #postyk{
 
-text-align: center;
+text-align: left;
+padding:10px 0px 0px 10px
 
 }
 
@@ -237,10 +238,15 @@ p1.style.textAlign = 'right';
 
 let footer = document.getElementById('footer');
 footer.innerHTML = `
+<hr>
 <br>
+<p>Эта функция работает, но еще далека от совершенства</p>
+<br>
+<hr>
 <br>
 <button onClick="shotit()">Сделать скриншот</button>
-<br>`
+<br>
+<hr>`
 
 let inputText = document.getElementById('inputText');
 inputText.onclick = function () {
