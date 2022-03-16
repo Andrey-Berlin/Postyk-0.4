@@ -261,8 +261,8 @@ let inText = document.getElementById("inText");
 let background = document.getElementById('Background');
 background.onclick = function () {
 
-    let bodyBackground = document.getElementById("body background").value;
-    seeText.style.background = bodyBackground;
+let bodyBackground = document.getElementById("body background").value;
+seeText.style.background = bodyBackground;
 
 }
 
