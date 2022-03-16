@@ -253,7 +253,7 @@ inputText.onclick = function () {
  
  let text = document.getElementById("text").value;
 
-    let inText = document.getElementById("inText");
+let inText = document.getElementById("inText");
     inText.innerHTML = text; 
   
 }
