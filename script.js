@@ -210,7 +210,7 @@ text-align:center;
 
 form {
 
-    margin:0% 0% 0% 15%;
+    margin:0% 3% 0% 10%;
 
 }
 
