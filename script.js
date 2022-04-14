@@ -21,6 +21,18 @@ let style = document.getElementById('style');
 header.innerHTML = `<h1>Postyk with Note & Editor</h1>
 <h2>Открыть файл как текст с расширением: .txt; .html; .js; .svg; для чтения и редакции</h2>`;
 section.innerHTML = `
+<h1>Convert text to HTML entities</h1>
+<h2>(for no good reason)</h2>
+
+<textarea class="in" id="in">Input text here</textarea>
+
+<input class="go" id="go" type="button" value="Go!" onclick="newTextIsHere();" />
+
+<textarea class="out" id="out">
+</textarea>
+
+<input class="copy" id="copy" type="button" value="Copy to Clipboard" onclick="copyToClip();" />
+<!------------>
 <main id="main" data-mode="inputBinary">
   <h1 id="heading"></h1>
   <textarea id="input"></textarea>
@@ -35,6 +47,7 @@ section.innerHTML = `
     <pre><code id="code-box-2"></code></pre>
   </div>
 </main>
+<!------------>
 <hr>
 <form action="">
 <br>
@@ -364,6 +377,9 @@ function readfile(files) {
 
     });
 }*/
+
+//-----------------//
+
 var input = document.getElementById("input");
 var output = document.getElementById("output");
 var clear = document.getElementById("clear");
@@ -460,4 +476,28 @@ function textAgent(str) {
   }
   
   return binArr.join(" ");
+}
+
+//------------------//
+var test = "bluh";
+
+function stringToEntities(s){
+  var output = "";
+  for (i = 0; i < s.length; i++){
+    output += "&amp;#" + s.charCodeAt(i) + ";";
+  }
+  return output;
+}
+
+function newTextIsHere(){
+  var input = document.getElementById("in").value;
+  console.log(input);
+  document.getElementById("out").innerHTML = stringToEntities(input);
+}
+
+function copyToClip(){
+  var text = document.getElementById("out");
+  text.select();
+  document.execCommand("Copy");
+  console.log("copied");
 }
