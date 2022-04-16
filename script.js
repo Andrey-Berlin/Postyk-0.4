@@ -137,7 +137,7 @@ seeText.innerHTML = `
  <p id ='p1'>©Postyk:)</p>
 `;
 
-seeText.style.border = 'thick double #32a1ce';
+seeText.style.border = 'thick double #041b24c4';
 
 style.innerHTML = `
 body {
